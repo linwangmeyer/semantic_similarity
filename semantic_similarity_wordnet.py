@@ -269,5 +269,5 @@ for nperm in range(0,1000):
     mean_rand_ani = np.nanmean(rand_ani)
     mean_rand_inani = np.nanmean(rand_inani)
     Perm.append(mean_rand_ani - mean_rand_inani)
-cluster_pval = (np.sum(np.abs(Perm) > ori_dif)+1)/np.float(nperm+1)
+cluster_pval = (np.sum(np.abs(Perm) > np.abs(ori_dif))+1)/np.float(nperm+1)
 print("animate="+str(means_ani) + "(" + str(std_ani) + "); inaimate="+str(means_inani) + "(" + str(std_inani) + "); cluster_pval="+str(cluster_pval))
